@@ -1,0 +1,42 @@
+.hero{
+    grid-column: 1/-1;
+
+    display: grid;
+    grid-template-columns: minmax(4rem,1fr) repeat(12, minmax(min-content,1fr)) minmax(6rem,1fr);
+
+    &__container{
+        grid-column: 2/14;
+
+    }
+
+    &__main{
+        text-align: center;
+        margin-top: 10rem;
+        
+        &--heading{
+            max-width: 50rem;
+            font-size: 5.6rem;
+            margin: 0 auto;
+        }
+
+        &--parag{
+            max-width: 40rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+            font-family: $font-secondary;
+            color: $color-grey-light-1;
+            margin: 0 auto;
+            margin-top: 4rem;
+
+        }
+
+        .btn{
+            margin-top: 2rem;
+
+            &:not(:last-child){
+                margin-right: 2rem;
+            }
+        }
+    }
+
+}

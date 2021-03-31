@@ -1,0 +1,62 @@
+.footer{
+    grid-column: 1/-1;
+    
+    background-color: $color-grey-light-2;
+    padding: 5rem 10rem;
+    text-align: center;
+
+    &__main{
+        font-size: 1.6rem;
+        font-weight: 900;
+
+        &--rights{
+            margin-bottom: 2rem;
+
+        }
+        .sami{
+            text-decoration: none;
+            color: inherit;
+            transition: color .2s ease;
+
+            &:hover{
+                color: $color-primary;
+            }
+        }
+
+        &--socials{
+            margin-top: 10rem;
+
+            i{
+                font-size: 2rem;
+            }
+
+            a{
+                text-decoration: none;
+                color: inherit;
+                transition: color .3s ease;
+
+                &:not(:last-child){
+                    margin-right: 4rem;
+                }
+
+    
+            }
+
+            .twitter:hover{
+                color: #1DA1F2;
+            }
+            .twitch:hover{
+                color: #6441a5;
+            }
+            .discord:hover{
+                color: #7289da;
+            }
+            .youtube:hover{
+                color: #FF0000;
+            }
+
+        }
+        
+        
+    }
+}
