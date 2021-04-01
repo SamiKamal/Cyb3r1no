@@ -18,3 +18,4 @@ document.querySelectorAll('.cards__box').forEach(el => {
 
     })
 })
+document.querySelector('.year').textContent = new Date().getFullYear()

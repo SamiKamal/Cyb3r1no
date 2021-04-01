@@ -36,7 +36,7 @@
         <footer class="footer">
             <div class="footer__main">
                 <p class="footer__main--rights">
-                   &copy; 2021 Cyb3r1no. All Rights Reserved
+                   &copy; <span class="year"></span> Cyb3r1no. All Rights Reserved
                 </p>
                 <p class="footer__main--developed">
                     Designed and Developer By <a href="https://www.twitter.com/iSamiXG" target="_blank" class="sami">Sami.</a>
@@ -69,5 +69,6 @@ VANTA.NET({
   maxDistance: 27.00,
   spacing: 20.00
 })
+document.querySelector('.year').textContent = new Date().getFullYear()
 </script>
 </html>
