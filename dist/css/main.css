@@ -15,6 +15,9 @@ html {
   @media only screen and (max-width: 87.5em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
 
 body {
   font-family: "Ubuntu Mono", monospace;
@@ -36,7 +39,7 @@ body {
   background-color: #0763CC;
   color: white;
   border-radius: 7px;
-  padding: 1em 4em;
+  padding: 1.2rem 4.8rem;
   will-change: transform, box-shadow;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.01), 0 6px 6px rgba(0, 0, 0, 0.001), 0 7px 7px rgba(0, 0, 0, 0.0001);
   transition: transform .3s ease, box-shadow .3s ease; }
@@ -50,13 +53,9 @@ body {
   --f: calc(var(--f-size) * var(--f-unit));
   --bg: transparent; }
 
-.hero__main--heading {
-  flex: 1;
-  line-height: .75;
-  margin: auto;
-  text-align: center;
+.heading--effect {
   transform: scaleX(var(--scale, 1)); }
-  .hero__main--heading::before, .hero__main--heading::after {
+  .heading--effect::before, .heading--effect::after {
     --top: 0;
     --left: 0;
     --v-height: 30%;
@@ -67,15 +66,15 @@ body {
     position: absolute;
     width: 100%;
     left: 0;
-    text-align: center;
+    text-align: inherit;
     transform: translateX(calc(var(--left) * 100%));
     filter: drop-shadow(0 0 transparent);
     text-shadow: calc(var(--left) * -3em) 0 0.02em lime, calc(var(--left) * -6em) 0 0.02em #ff00e1;
     background-color: var(--bg);
     clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut)); }
-  .hero__main--heading::before {
+  .heading--effect::before {
     animation: glitch-b 1.7s infinite alternate-reverse; }
-  .hero__main--heading::after {
+  .heading--effect::after {
     animation: glitch-a 3.1s infinite alternate; }
 
 @keyframes glitch-p {
@@ -160,6 +159,9 @@ body {
       margin-bottom: 8rem; }
       .cards__container .cards__box--imgWrapper {
         max-width: 380px; }
+        @media only screen and (max-width: 37.5em) {
+          .cards__container .cards__box--imgWrapper {
+            max-width: 150px; } }
         .cards__container .cards__box--imgWrapper img {
           max-width: 100%;
           border-radius: 17px; }
@@ -171,12 +173,19 @@ body {
         align-items: center;
         background-color: white;
         border-radius: 17px; }
+        @media only screen and (max-width: 37.5em) {
+          .cards__container .cards__box .tools-imgWrapper {
+            max-width: 150px;
+            max-height: 200px; } }
         .cards__container .cards__box .tools-imgWrapper i {
           display: block;
           text-align: center;
           font-size: 25rem;
           justify-self: center;
           align-self: center; }
+          @media only screen and (max-width: 37.5em) {
+            .cards__container .cards__box .tools-imgWrapper i {
+              font-size: 20rem; } }
       .cards__container .cards__box--mainText {
         display: flex;
         flex-direction: column;
@@ -186,6 +195,9 @@ body {
       .cards__container .cards__box--heading {
         font-size: 4rem;
         vertical-align: text-top; }
+        @media only screen and (max-width: 37.5em) {
+          .cards__container .cards__box--heading {
+            font-size: 3rem; } }
       .cards__container .cards__box--parag {
         font-size: 1.6rem; }
       .cards__container .cards__box--btnWrapper {
@@ -257,9 +269,14 @@ body {
 
 .nav {
   padding: 5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .nav {
+      margin-bottom: 5rem; } }
   .nav a {
+    display: block;
     text-decoration: none;
-    color: inherit; }
+    color: inherit;
+    width: 160px; }
   .nav .logo {
     font-size: 4rem; }
     .nav .logo span {

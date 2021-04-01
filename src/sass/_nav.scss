@@ -1,9 +1,15 @@
 .nav{
     padding: 5rem;
 
+    @media only screen and (max-width: $bp-small) {
+        margin-bottom: 5rem;
+    }
+  
     a{
+        display: block;
         text-decoration: none;
         color: inherit;
+        width: 160px;
     }
     .logo{
         font-size: 4rem;

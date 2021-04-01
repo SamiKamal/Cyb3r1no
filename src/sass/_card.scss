@@ -27,6 +27,10 @@
             &--imgWrapper{
                 max-width: 380px;
                 
+                @media only screen and (max-width: $bp-small) {
+                    max-width: 150px;
+                }
+
                 img{
                     max-width: 100%;
                     border-radius: 17px;
@@ -42,12 +46,23 @@
                 background-color: white;
                 border-radius: 17px;
 
+                @media only screen and (max-width: $bp-small) {
+                    max-width: 150px;
+                    max-height: 200px;
+                }
+
+              
                 i{
                     display: block;
                     text-align: center;
                     font-size: 25rem;
                     justify-self: center;
                     align-self: center;
+
+                    @media only screen and (max-width: $bp-small) {
+                        font-size: 20rem;
+                    }
+    
                 }
             }
 
@@ -62,6 +77,11 @@
             &--heading{
                 font-size: 4rem;
                 vertical-align: text-top;
+
+                @media only screen and (max-width: $bp-small) {
+                    font-size: 3rem;
+                }
+
             }
 
             &--parag{

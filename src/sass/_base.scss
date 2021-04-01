@@ -40,10 +40,13 @@ html{
     box-sizing: border-box;
     font-size: 62.5%;
 
-    @media only screen and  (max-width: $bp-largest) {
-        font-size: 50%;
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 50%;
+  }
 
-    }
+  @media only screen and (max-width: $bp-small) {
+      font-size: 37.5%;
+  }
 }
 
 body{
@@ -70,7 +73,7 @@ body{
     background-color: $color-primary;
     color: white;
     border-radius: 7px;
-    padding: 1em 4em;
+    padding: 1.2rem 4.8rem;
     will-change: transform, box-shadow;
     box-shadow: 0 3px 3px rgba(0, 0, 0, .1),
     0 4px 4px rgba(0, 0, 0, .1),
@@ -99,12 +102,7 @@ body{
   }
   
 
-.hero__main--heading {
-    flex: 1;
-    line-height: .75;
-    margin: auto;
-    // color: #1af0dc;
-    text-align: center;
+.heading--effect {
     transform: scaleX(var(--scale, 1));
     // animation: glitch-p 11s infinite alternate;
     
@@ -122,8 +120,7 @@ body{
       position: absolute;
       width: 100%;
       left: 0;
-      text-align: center;
-      
+      text-align: inherit;
       transform: translateX(calc(var(--left) * 100%));
       
       // this helps to get rid of pixelization
